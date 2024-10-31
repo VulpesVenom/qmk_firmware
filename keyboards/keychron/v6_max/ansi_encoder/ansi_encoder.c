@@ -15,6 +15,7 @@
  */
 
 #include "quantum.h"
+#include "os_detection.h"
 
 // clang-format off
 
@@ -173,3 +174,41 @@ led_config_t g_led_config = {
     }
 };
 #endif
+
+
+// Set RGB colours based on OS
+bool process_detected_host_os_kb(os_variant_t detected_os) {
+    switch (detected_os) {
+        case OS_MACOS:
+        case OS_IOS:
+//          rgb_matrix_mode_noeeprom(RGB_MATRIX_SOLID_COLOR);
+            for (uint8_t row = 0; row < MATRIX_ROWS; ++row) {
+                for (uint8_t col = 0; col < MATRIX_COLS; ++col) {
+                    uint8_t index = g_led_config.matrix_co[row][col];
+                    rgb_matrix_set_color(index, RGB_WHITE);
+                }
+            }
+            break;
+        case OS_WINDOWS:
+        case OS_UNSURE:
+//          rgb_matrix_mode_noeeprom(RGB_MATRIX_SOLID_COLOR);
+            for (uint8_t row = 0; row < MATRIX_ROWS; ++row) {
+                for (uint8_t col = 0; col < MATRIX_COLS; ++col) {
+                    uint8_t index = g_led_config.matrix_co[row][col];
+                    rgb_matrix_set_color(index, RGB_TEAL);
+
+                }
+            }
+            break;
+        case OS_LINUX:
+//          rgb_matrix_mode_noeeprom(RGB_MATRIX_SOLID_COLOR);
+            for (uint8_t row = 0; row < MATRIX_ROWS; ++row) {
+                for (uint8_t col = 0; col < MATRIX_COLS; ++col) {
+                    uint8_t index = g_led_config.matrix_co[row][col];
+                    rgb_matrix_set_color(index, RGB_CORAL);
+                }
+            }
+            break;
+    }
+    return true;
+};
