@@ -30,14 +30,18 @@ enum unicode_names {
 	WOOP,
 	TECH,
 	TICK,
-	RUDE
+	RUDE,
+	HAHA,
+	GOOD
 };
 
 const uint32_t PROGMEM unicode_map[] = {
-	[WOOP] = 0x1F389,
-    [TECH] = 0x1F4BB,  // ‽
-    [TICK] = 0x2713, // 🐍
-    [RUDE] = 0x1F595,
+    [WOOP] = 0x1F389, // 🎉
+    [TECH] = 0x1F4BB,  // 💻
+    [TICK] = 0x2713, // ✓
+    [RUDE] = 0x1F595,// 🖕
+    [HAHA] = 0x1F602, // 😂
+    [GOOD] = 0x1F44D // 👍
 };
 
 enum custom_keycodes {
@@ -60,70 +64,70 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
 	switch (keycode) {
 		case MACRO1:
 			if (record->event.pressed) {
-				SEND_STRING("v8ZYJUunJz2D7Sfj");
+				SEND_STRING("Sophia.sc4341");
 			} else {
 				// when keycode is released
 			}
 			break;
 		case MACRO2:
 			if (record->event.pressed) {
-				SEND_STRING("h3kbHh8VL5nQ5QCr");
+				SEND_STRING("Sophia.sc4341secur3");
 			} else {
 				// when keycode is released
 			}
 			break;
 		case MACRO3:
 		    if (record->event.pressed) {
-		        SEND_STRING("!4hhTh3S3r3n1ty");
+		        SEND_STRING("SophiaColl1?");
 		    } else {
 		        // when keycode is released
 		    }
 		    break;
 		case MACRO4:
 		    if (record->event.pressed) {
-		        SEND_STRING("Hippo Enrollment3");
+		        SEND_STRING("Backlog Surrogate3");
 		    } else {
 		        // when keycode is released
 		    }
 		    break;
 		case MACRO5:
 		    if (record->event.pressed) {
-		        SEND_STRING(SS_LCTL("c") SS_LCTL(SS_LSFT("5")) SS_DELAY(1000) SS_TAP(X_TAB) SS_TAP(X_TAB) SS_TAP(X_TAB) SS_TAP(X_TAB) SS_LCTL("v") SS_TAP(X_TAB) "wstone" SS_TAP(X_TAB) "Hippo Enrollment3" SS_TAP(X_ENT));
+//		        SEND_STRING(SS_LCTL("c") SS_LCTL(SS_LSFT("5")) SS_DELAY(1000) SS_TAP(X_TAB) SS_TAP(X_TAB) SS_TAP(X_TAB) SS_TAP(X_TAB) SS_LCTL("v") SS_TAP(X_TAB) "wstone" SS_TAP(X_TAB) "Hippo Enrollment3" SS_TAP(X_ENT));
 		    } else {
 		        // when keycode is released
 		    }
 		    break;
 		case MACRO6:
 		    if (record->event.pressed) {
-		        SEND_STRING(SS_LCTL(SS_LSFT("6")));
+//		        SEND_STRING(SS_LCTL(SS_LSFT("6")));
 		    } else {
 		        // when keycode is released
 		    }
 		    break;
 		case MACRO7:
 		    if (record->event.pressed) {
-		        SEND_STRING(SS_LCTL("c") SS_LCTL(SS_LSFT("7")));
+//		        SEND_STRING(SS_LCTL("c") SS_LCTL(SS_LSFT("7")));
 		    } else {
 		        // when keycode is released
 		    }
 		    break;
 		case MACRO8:
 		    if (record->event.pressed) {
-		        SEND_STRING("C0mpareCompla!nts");
+//		        SEND_STRING("C0mpareCompla!nts");
 		    } else {
 		        // when keycode is released
 		    }
 		    break;
 		case MACRO9:
 		    if (record->event.pressed) {
-		        SEND_STRING(SS_LCTL(SS_LSFT("9")));
+//		        SEND_STRING(SS_LCTL(SS_LSFT("9")));
 		    } else {
 		        // when keycode is released
 		    }
 		    break;
 		case MACRO0:
 		    if (record->event.pressed) {
-		        SEND_STRING(SS_LCTL(SS_LSFT("0")));
+//		        SEND_STRING(SS_LCTL(SS_LSFT("0")));
 		    } else {
 		        // when keycode is released
 		    }
@@ -172,14 +176,14 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         _______,            _______,  _______,  _______,  _______,  BAT_LVL,  NK_TOGG,  _______,  _______,  _______,  _______,              _______,              _______,            _______,  _______,  _______,  
         _______,  _______,  _______,                                _______,                                _______,  _______,  _______,    _______,    _______,  _______,  _______,  _______,            _______,  _______),
     [WIN_BASE] = LAYOUT_ansi_109(
-        KC_ESC,   KC_F1,    KC_F2,    KC_F3,    KC_F4,    KC_F5,    KC_F6,    KC_F7,    KC_F8,    KC_F9,    KC_F10,   KC_F11,   KC_F12,     KC_MUTE,    KC_PSCR,  DF(2), RGB_MOD,  UM(WOOP),    UM(TECH),    UM(TICK),     UM(RUDE),
+        KC_ESC,   KC_F1,    KC_F2,    KC_F3,    KC_F4,    KC_F5,    KC_F6,    KC_F7,    KC_F8,    KC_F9,    KC_F10,   KC_F11,   KC_F12,     KC_MUTE,    KC_PSCR,  DF(2), RGB_MOD,  UM(HAHA),    UM(GOOD),    UM(TICK),     UM(RUDE),
         KC_GRV,   KC_1,     KC_2,     KC_3,     KC_4,     KC_5,     KC_6,     KC_7,     KC_8,     KC_9,     KC_0,     KC_MINS,  KC_EQL,     KC_BSPC,    KC_INS,   KC_HOME,  KC_PGUP,  KC_NUM,   KC_PSLS,  KC_PAST,  KC_PMNS,
         KC_TAB,   KC_Q,     KC_W,     KC_E,     KC_R,     KC_T,     KC_Y,     KC_U,     KC_I,     KC_O,     KC_P,     KC_LBRC,  KC_RBRC,    KC_BSLS,    KC_DEL,   KC_END,   KC_PGDN,  KC_P7,    KC_P8,    KC_P9,
         LT(3,KC_MS_BTN2),  KC_A,     KC_S,     KC_D,     KC_F,     KC_G,     KC_H,     KC_J,     KC_K,     KC_L,     KC_SCLN,  KC_QUOT,              KC_ENT,                                   KC_P4,    KC_P5,    KC_P6,    KC_PPLS,
         KC_LSFT,            KC_Z,     KC_X,     KC_C,     KC_V,     KC_B,     KC_N,     KC_M,     KC_COMM,  KC_DOT,   KC_SLSH,              KC_RSFT,              KC_UP,              KC_P1,    KC_P2,    KC_P3,
         KC_LCTL,  KC_LWIN,  KC_LALT,                                KC_SPC,                                 KC_RALT,  KC_LWIN,  LT(WIN_FN,KC_APP), KC_RCTL,    KC_LEFT,  KC_DOWN,  KC_RGHT,  KC_P0,              KC_PDOT,  KC_PENT),
     [WIN_FN] = LAYOUT_ansi_109(
-        UC_WIN,  KC_BRID,  KC_BRIU,  KC_TASK,  KC_FILE,  RGB_VAD,  RGB_VAI,  KC_MPRV,  KC_MPLY,  KC_MNXT,  KC_MUTE,  KC_VOLD,  KC_VOLU,    RGB_TOG,    _______,  DF(2),  RGB_TOG,  _______,  _______,  _______,  _______,
+        UC_WIN,  KC_BRID,  KC_BRIU,  KC_TASK,  KC_FILE,  RGB_VAD,  RGB_VAI,  KC_MPRV,  KC_MPLY,  KC_MNXT,  KC_MUTE,  KC_VOLD,  KC_VOLU,    RGB_TOG,    _______,  DF(2),  RGB_TOG,  UM(WOOP),  _______,  UM(TECH),  _______,
         _______,  MACRO1,  MACRO2,  MACRO3,  MACRO4,  MACRO5,  MACRO6,  MACRO7,  MACRO8,  MACRO9, MACRO0,  _______,  _______,    _______,    _______,  _______,  _______,  _______,  _______,  _______,  _______,
         RGB_TOG,  RGB_MOD,  RGB_VAI,  RGB_HUI,  RGB_SAI,  RGB_SPI,  _______,  _______,  _______,  _______,  _______,  _______,  _______,    _______,    _______,  _______,  _______,  _______,  _______,  _______,
         _______,  RGB_RMOD, RGB_VAD,  RGB_HUD,  RGB_SAD,  RGB_SPD,  _______,  _______,  _______,  _______,  _______,  _______,              _______,                                  _______,  _______,  _______,  _______,
