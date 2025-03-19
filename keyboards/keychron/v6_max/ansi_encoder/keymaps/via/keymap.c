@@ -64,28 +64,28 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
 	switch (keycode) {
 		case MACRO1:
 			if (record->event.pressed) {
-				SEND_STRING("Sophia.sc4341");
+				SEND_STRING("");
 			} else {
 				// when keycode is released
 			}
 			break;
 		case MACRO2:
 			if (record->event.pressed) {
-				SEND_STRING("Sophia.sc4341secur3");
+				SEND_STRING("");
 			} else {
 				// when keycode is released
 			}
 			break;
 		case MACRO3:
 		    if (record->event.pressed) {
-		        SEND_STRING("SophiaColl1?");
+		        SEND_STRING("Transport Danger3");
 		    } else {
 		        // when keycode is released
 		    }
 		    break;
 		case MACRO4:
 		    if (record->event.pressed) {
-		        SEND_STRING("Backlog Surrogate3");
+		        SEND_STRING("Transport Favour3");
 		    } else {
 		        // when keycode is released
 		    }
@@ -187,7 +187,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         _______,  MACRO1,  MACRO2,  MACRO3,  MACRO4,  MACRO5,  MACRO6,  MACRO7,  MACRO8,  MACRO9, MACRO0,  _______,  _______,    _______,    _______,  _______,  _______,  _______,  _______,  _______,  _______,
         RGB_TOG,  RGB_MOD,  RGB_VAI,  RGB_HUI,  RGB_SAI,  RGB_SPI,  _______,  _______,  _______,  _______,  _______,  _______,  _______,    _______,    _______,  _______,  _______,  _______,  _______,  _______,
         _______,  RGB_RMOD, RGB_VAD,  RGB_HUD,  RGB_SAD,  RGB_SPD,  _______,  _______,  _______,  _______,  _______,  _______,              _______,                                  _______,  _______,  _______,  _______,
-        _______,            _______,  _______,  _______,  _______,  BAT_LVL,  NK_TOGG,  _______,  _______,  _______,  _______,              _______,              _______,            _______,  _______,  _______,  
+        _______,            BT_HST1,  BT_HST2,  BT_HST3,  _______,  BAT_LVL,  NK_TOGG,  _______,  _______,  _______,  _______,              _______,              _______,            _______,  _______,  _______,  
         _______,  _______,  _______,                                _______,                                _______,  _______,  _______,    _______,    _______,  _______,  _______,  _______,            _______,  _______)
 };
 
